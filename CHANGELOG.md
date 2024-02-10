@@ -1,5 +1,8 @@
 # Changelog
 
+## 0.0.2.1 — 10th Febraury 2024
+- Make pkg-config an automatic flag: <https://github.com/TeofilC/digest/pull/21>
+
 ## 0.0.2.0 — 13th December 2023
 - Add CRC32C (Thanks to @4eUep): <https://github.com/TeofilC/digest/pull/18>
 - Support latest GHC versions: <https://github.com/TeofilC/digest/pull/19>

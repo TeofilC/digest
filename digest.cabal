@@ -28,7 +28,7 @@ extra-source-files:
 
 flag pkg-config
   default:     True
-  manual:      True
+  manual:      False
   description: Use @pkg-config(1)@ to locate @zlib@ library.
 
 -- TODO: auto detect

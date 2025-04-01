@@ -124,8 +124,10 @@ library
 
   ghc-options:        -Wall
 
-  if ((flag(pkg-config) && !os(windows)) && !os(freebsd))
-    pkgconfig-depends: zlib
-
+  if impl(ghcjs) || os(ghcjs) || arch(wasm32) || (!flag(pkg-config) && os(windows))
+    build-depends: zlib-clib < 2
   else
-    build-depends: zlib
+    if flag(pkg-config)
+      pkgconfig-depends: zlib
+    else
+      extra-libraries: z
